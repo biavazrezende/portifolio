@@ -1,0 +1,9 @@
+# backups locais da edicao, nao vao para o repo publico
+*.bak
+*.bak[0-9]
+
+# rascunho anterior do layout, mantido so localmente
+index-v1-editorial.html
+
+# documento interno de revisao de copy
+COPY.md
