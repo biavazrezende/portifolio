@@ -166,7 +166,7 @@ em{font-style:normal;}
 /* ============================================================
    HERO
    ============================================================ */
-.hero{position:relative;isolation:isolate;padding-top:clamp(2.2rem,5vw,4.5rem);}
+.hero{position:relative;isolation:isolate;overflow-x:clip;padding-top:clamp(2.2rem,5vw,4.5rem);}
 .glow{position:absolute;inset:-10% -10% 0;z-index:-1;overflow:hidden;pointer-events:none;}
 .glow i{position:absolute;display:block;border-radius:999px;}
 .g1{
@@ -574,7 +574,10 @@ em{font-style:normal;}
   .top-nav a:last-child{border-bottom:0;}
   .top-nav a::after{display:none;}
   .foot-nav a{display:flex;align-items:center;min-height:44px;}
-  .hero-stage{grid-template-columns:1fr;margin-top:1rem;justify-items:center;text-align:center;}
+  /* sobe a foto para dentro do titulo, como no desktop: o recuo consome
+     a area transparente acima da cabeca, sem cobrir o texto */
+  .hero-stage{grid-template-columns:1fr;margin-top:clamp(-5rem,-18vw,-3.5rem);
+              justify-items:center;text-align:center;}
   .hero-side{max-width:34rem;padding-bottom:0;text-align:center;}
   .hero-side.left{order:2;}
   .portrait{order:1;max-width:min(88vw,400px);}
